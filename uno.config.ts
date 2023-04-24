@@ -52,7 +52,7 @@ export default defineConfig({
       sm: 'calc(var(--radius) - 4px)',
     },
     fontFamily: {
-      sans: ["var(--font-sans)"],
+      sans: ["var(--font-sans)", "JetBrains Mono"],
     },
     keyframes: {
       "accordion-down": {

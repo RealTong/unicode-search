@@ -26,8 +26,10 @@
     "@unocss/reset": "^0.50.0",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
+    "node-fetch": "^3.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^1.10.0"
+    "tailwind-merge": "^1.10.0",
+    "vite-plugin-ssr": "^0.4.116"
   }
 }

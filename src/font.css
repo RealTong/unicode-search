@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'JetBrainsMono';
+    src: url("/JetBrainsMono.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.jb-mono {
+    font-family: 'JetBrainsMono';
+}
