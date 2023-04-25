@@ -1,12 +1,21 @@
 import React from 'react';
 import type {Icon} from "@/types";
-function Icon(props:Icon) {
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+
+function Icon(props: Icon) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
-        <span className="text-2xl jb-mono">{props.char}</span>
-      </div>
-      <div className="text-gray-500 text-sm">{props.code}</div>
+    <div className="mx-auto">
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild
+                          className={"w-18 h-18 border-1 border-gray-300 select-none rounded bg-white flex justify-center items-center hover:bg-gray-300 hover:cursor-pointer"}>
+            <span className="text-lg font-symbols ">{props.char}</span>
+          </TooltipTrigger>
+          <TooltipContent side={"bottom"} className={"bg-white rounded"}>
+            <p>{props.name}</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </div>
   );
 }
