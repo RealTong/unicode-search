@@ -7,11 +7,11 @@ import {Search} from "@/components/Search";
 import Icon from "@/components/Icon";
 
 function Page(pageProps: any) {
-  const { icons } = pageProps
+  const {icons} = pageProps
   return (
     <div className="px-4">
-      <div className={"h-22"}>
-
+      <div className={"w-max m-auto my-14"}>
+        <p className={"text-6xl"}>Cheat Sheet</p>
       </div>
       <Search iconsCount={icons.length}/>
       <div className={"grid grid-cols-14 gap-4"}>
