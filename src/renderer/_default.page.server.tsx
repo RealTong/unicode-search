@@ -1,6 +1,8 @@
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr/server'
 import {renderToString} from "react-dom/server";
 
+const passToClient = ['pageProps', 'documentProps']
+
 function render(pageContext: any) {
   const { Page, pageProps } = pageContext
   const pageHtml = renderToString(<Page {...pageProps} />)
@@ -27,3 +29,4 @@ function render(pageContext: any) {
     </html>`
 }
 export { render }
+export { passToClient }
