@@ -8,7 +8,7 @@ interface IconStoreState{
 }
 const useIconStore = create<IconStoreState>((set,get)=>({
   color: "text-lime-300",
-  size: "text-lg",
+  size: "text-xs",
   changeColor: (targetColor)=>set((state)=>({
     color: targetColor
   })),
