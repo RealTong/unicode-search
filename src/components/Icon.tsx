@@ -12,7 +12,7 @@ function Icon(props: Icon) {
           <TooltipTrigger asChild
                           className={"w-16 h-16 border-1 border-gray-300 select-none rounded bg-white flex justify-center items-center hover:bg-gray-300 hover:cursor-pointer"}>
             {/*"xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl", "7xl", "8xl", "9xl"*/}
-            <span className={`font-symbols ${iconSize} ${iconColor}`}>{props.char}</span>
+            <span className={`font-symbols ${iconSize}`} style={{color: `${iconColor}`}}>{props.char}</span>
           </TooltipTrigger>
           <TooltipContent side={"bottom"} className={"bg-white rounded"}>
             <p>{props.name}</p>
