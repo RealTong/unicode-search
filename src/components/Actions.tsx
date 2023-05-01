@@ -7,7 +7,7 @@ import {useIconStore} from "@/store/IconStore";
 export function Actions({ ...props }: SliderProps) {
   const iconSizeChange = useIconStore(state => state.changeSize)
 
-  const iconSizes = ["sm", "xs",  "xl", "2xl", "3xl", "4xl","5xl", "6xl"]
+  const iconSizes = ["xs", "sm", "base", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl", "7xl", "8xl", "9xl"]
   return (
     <div className={"flex flex-col justify-center items-center"}>
       <Slider
@@ -19,7 +19,6 @@ export function Actions({ ...props }: SliderProps) {
 
         }}
         onValueCommit={(e)=>{
-          console.log(iconSizes[e[0]])
           const currentSize = iconSizes[e[0]]
           iconSizeChange(`text-${currentSize}`)
         }}

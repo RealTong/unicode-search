@@ -1,4 +1,5 @@
 import {hydrate, render as reactRender} from "react-dom";
+import "../assets/styles.css"
 
 
 export { render }

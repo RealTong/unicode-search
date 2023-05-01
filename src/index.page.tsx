@@ -1,8 +1,5 @@
 import React from 'react';
 
-import '@unocss/reset/tailwind.css'
-import 'uno.css'
-import './assets/font.css'
 import Icon from "@/components/Icon";
 import {useIconStore} from "@/store/IconStore";
 import {Slider} from "@/components/ui/slider";
@@ -19,8 +16,8 @@ function Page(pageProps: any) {
         <Actions/>
       </div>
       {/*搜索暂时先不做, 临时学习Zustand*/}
-      {/*<Search iconsCount={icons.length}/>*/}
-      <div className={"grid grid-cols-14 gap-4"}>
+      <Search iconsCount={icons.length}/>
+      <div className={"grid grid-cols-12 gap-4"}>
         {
           icons.map((item: any) => {
             return (
