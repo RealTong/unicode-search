@@ -7,14 +7,11 @@ interface IconStoreState{
   changeSize:(targetSize:string)=>void
 }
 const useIconStore = create<IconStoreState>((set,get)=>({
-  color: "text-black",
+  color: "#000",
   size: "text-xs",
-  changeColor: (targetColor)=>set((state)=>{
-    console.log("targetColor: ",targetColor)
-    return ({
-      color: targetColor
-    })
-  }),
+  changeColor: (targetColor)=>set((state)=>({
+    color: targetColor
+  })),
   changeSize: (targetSize)=>set((state)=>({
     size: targetSize
   }))
